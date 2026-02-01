@@ -96,7 +96,7 @@ export default function Home() {
               На ПК (md): h-24 w-72 (большой, как вы хотели) 
           */}
           <div className="relative h-12 w-36 md:h-24 md:w-72 flex-shrink-0">
-             <Image src="/logo1.png" alt="DENI-CAR" fill className="object-contain object-left" priority />
+             <Image src="/logo-fin.png" alt="DENI-CAR" fill className="object-contain object-left" priority />
           </div>
 
           {/* 2. Меню (Скрыто на мобильных, видно на ПК) */}
@@ -278,7 +278,7 @@ export default function Home() {
           <div className="flex-1 mt-8 md:mt-0 relative h-64 md:h-[400px] w-full z-10 flex justify-center items-center bg-white/5 rounded-3xl border border-white/10 backdrop-blur-sm p-4">
              <div className="relative w-full h-full">
                 {/* Убедитесь, что файл называется car-graphic.png и лежит в public */}
-                <Image src="/car-graphic.png" alt="Партнерская программа" fill className="object-contain" />
+                <Image src="//car-fin.png" alt="Партнерская программа" fill className="object-contain" />
              </div>
           </div>
         </div>
@@ -301,7 +301,7 @@ export default function Home() {
           <div>
             <div className="relative h-16 w-48 mb-6">
                 {/* Логотип на темном фоне должен быть либо белым, либо png с прозрачностью */}
-                <Image src="/logo1.png" alt="DENI-CAR" fill className="object-contain object-left" />
+                <Image src="/logo-fin.png" alt="DENI-CAR" fill className="object-contain object-left" />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed font-medium max-w-xs">
               Финансовая помощь под залог автомобиля. <br/>Быстро. Честно. Законно.
