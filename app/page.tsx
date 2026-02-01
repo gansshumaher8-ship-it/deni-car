@@ -96,7 +96,7 @@ export default function Home() {
               На ПК (md): h-24 w-72 (большой, как вы хотели) 
           */}
           <div className="relative h-12 w-36 md:h-24 md:w-72 flex-shrink-0">
-             <Image src="/logo.png" alt="DENI-CAR" fill className="object-contain object-left" priority />
+             <Image src="/logo1.png" alt="DENI-CAR" fill className="object-contain object-left" priority />
           </div>
 
           {/* 2. Меню (Скрыто на мобильных, видно на ПК) */}
