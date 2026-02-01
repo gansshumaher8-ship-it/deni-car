@@ -243,37 +243,41 @@ export default function Home() {
       </Section>
 
       {/* --- ПАРТНЕРЫ (Белый фон) --- */}
+      {/* --- ПАРТНЕРЫ (Исправленная мобильная версия) --- */}
       <Section id="partners" className="bg-white">
-        <div className="bg-gray-900 p-12 rounded-[3rem] md:flex items-center gap-16 relative overflow-hidden shadow-2xl">
-          {/* Декор */}
+        {/* p-6 для мобильных, p-12 для ПК. overflow-visible, чтобы картинку не обрезало */}
+        <div className="bg-gray-900 p-6 md:p-12 rounded-[2rem] md:rounded-[3rem] md:flex items-center gap-12 relative overflow-hidden shadow-2xl">
+          {/* Декор фона */}
           <div className="absolute top-0 right-0 w-2/3 h-full bg-gray-800 skew-x-12 translate-x-32 z-0 opacity-50" />
 
           <div className="flex-1 relative z-10">
-            <h2 className="text-4xl font-extrabold mb-6 text-white leading-tight">
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-white leading-tight">
               Приглашаем <br/><span className="text-yellow-400">партнеров</span>
             </h2>
             
-            <p className="text-gray-300 text-xl mb-10 font-medium">
+            <p className="text-gray-300 text-lg md:text-xl mb-8 font-medium">
               Сотрудничаем с автосалонами, ломбардами и страховыми агентами на особых условиях.
             </p>
             
-            <ul className="space-y-5 mb-10">
+            <ul className="space-y-4 mb-8">
               <li className="flex items-center gap-4">
                 <CheckCircle className="text-yellow-400 w-6 h-6 flex-shrink-0"/>
-                <span className="text-white font-bold text-lg">Высокое вознаграждение</span>
+                <span className="text-white font-bold text-base md:text-lg">Высокое вознаграждение</span>
               </li>
               <li className="flex items-center gap-4">
                 <CheckCircle className="text-yellow-400 w-6 h-6 flex-shrink-0"/>
-                <span className="text-white font-bold text-lg">VIP-условия для клиентов</span>
+                <span className="text-white font-bold text-base md:text-lg">VIP-условия для клиентов</span>
               </li>
             </ul>
-            <a href="#form" className="inline-block bg-yellow-400 text-black font-extrabold px-10 py-4 rounded-full hover:bg-yellow-300 transition shadow-lg shadow-yellow-400/20">
+            <a href="#form" className="inline-block w-full md:w-auto text-center bg-yellow-400 text-black font-extrabold px-8 py-4 rounded-full hover:bg-yellow-300 transition shadow-lg shadow-yellow-400/20">
               Стать партнером
             </a>
           </div>
           
-          <div className="flex-1 mt-12 md:mt-0 relative h-[400px] w-full z-10 flex justify-center items-center bg-white/5 rounded-3xl border border-white/10 backdrop-blur-sm p-4">
+          {/* Картинка: на мобильном h-64 (поменьше), на ПК h-[400px] */}
+          <div className="flex-1 mt-8 md:mt-0 relative h-64 md:h-[400px] w-full z-10 flex justify-center items-center bg-white/5 rounded-3xl border border-white/10 backdrop-blur-sm p-4">
              <div className="relative w-full h-full">
+                {/* Убедитесь, что файл называется car-graphic.png и лежит в public */}
                 <Image src="/car-graphic.png" alt="Партнерская программа" fill className="object-contain" />
              </div>
           </div>
@@ -297,7 +301,7 @@ export default function Home() {
           <div>
             <div className="relative h-16 w-48 mb-6">
                 {/* Логотип на темном фоне должен быть либо белым, либо png с прозрачностью */}
-                <Image src="/logo.png" alt="DENI-CAR" fill className="object-contain object-left" />
+                <Image src="/logo1.png" alt="DENI-CAR" fill className="object-contain object-left" />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed font-medium max-w-xs">
               Финансовая помощь под залог автомобиля. <br/>Быстро. Честно. Законно.
