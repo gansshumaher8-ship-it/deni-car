@@ -5,13 +5,6 @@ import { motion } from 'framer-motion';
 import { ChevronDown, MapPin, Phone, CheckCircle, Clock, FileText } from 'lucide-react';
 import Image from 'next/image';
 
-// ИМПОРТИРУЕМ КАРТИНКИ НАПРЯМУЮ
-// ВАЖНО: Скопируйте файлы logo-fin.png и car-fin.png в папку app!
-import logoImg from './logo-fin.png';
-import carImg from './car-fin.png';
-// Если bg.jpg тоже не грузится, скопируйте его в app и раскомментируйте строку ниже:
-// import bgImg from './bg.jpg'; 
-
 // --- КОМПОНЕНТЫ ---
 
 const Section = ({ children, className, id }: any) => (
@@ -91,12 +84,12 @@ export default function Home() {
     <main className="min-h-screen font-sans bg-white text-gray-900">
       
       {/* --- НАВИГАЦИЯ --- */}
-      <nav className="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-white/10 shadow-sm transition-all">
+      <nav className="fixed top-0 w-full z-50 bg-black/95 backdrop-blur-md border-b border-white/10 shadow-sm transition-all">
         <div className="max-w-7xl mx-auto px-4 md:px-6 h-20 md:h-24 flex justify-between items-center">
           
-          {/* Логотип через IMPORT (надежно) */}
+          {/* Логотип: вернули обычный /logo.jpg из папки public */}
           <div className="relative h-12 w-36 md:h-20 md:w-64 flex-shrink-0">
-             <Image src={logoImg} alt="DENI-CAR" fill className="object-contain object-left" priority placeholder="blur" />
+             <Image src="/logo.jpg" alt="DENI-CAR" fill className="object-contain object-left" priority />
           </div>
 
           <div className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-wider text-white">
@@ -120,7 +113,6 @@ export default function Home() {
       {/* --- HERO SECTION --- */}
       <section className="relative min-h-[90vh] flex items-center pt-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          {/* Фон пока оставляем как было, если он работал. Если нет - скажите. */}
           <Image 
             src="/bg.jpg" 
             alt="Luxury Car" 
@@ -233,8 +225,8 @@ export default function Home() {
           
           <div className="flex-1 mt-8 md:mt-0 relative h-64 md:h-[400px] w-full z-10 flex justify-center items-center bg-white/5 rounded-3xl border border-white/10 backdrop-blur-sm p-4">
              <div className="relative w-full h-full">
-                {/* КАРТИНКА ПАРТНЕРОВ ЧЕРЕЗ IMPORT */}
-                <Image src={carImg} alt="Партнерская программа" fill className="object-contain" placeholder="blur" />
+                {/* Вернули обычный /car-fin.png (если он у вас есть в public) или /car-graphic.png */}
+                <Image src="/car-fin.png" alt="Партнерская программа" fill className="object-contain" />
              </div>
           </div>
         </div>
@@ -253,8 +245,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-16">
           <div>
             <div className="relative h-12 w-36 md:h-16 md:w-48 mb-6">
-                {/* ЛОГОТИП В ФУТЕРЕ ЧЕРЕЗ IMPORT */}
-                <Image src={logoImg} alt="DENI-CAR" fill className="object-contain object-left" />
+                {/* Логотип в футере */}
+                <Image src="/logo.jpg" alt="DENI-CAR" fill className="object-contain object-left" />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed font-medium max-w-xs">
               Финансовая помощь под залог автомобиля. <br/>Быстро. Честно. Законно.
