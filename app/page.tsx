@@ -100,7 +100,7 @@ export default function Home() {
           </div>
 
           <div className="flex gap-2">
-              <a href="tel:+789774201925" className="md:hidden bg-yellow-400 text-black p-3 rounded-full shadow-lg hover:bg-yellow-300 transition">
+              <a href="tel:+79150890111" className="md:hidden bg-yellow-400 text-black p-3 rounded-full shadow-lg hover:bg-yellow-300 transition">
                 <Phone className="w-5 h-5" />
               </a>
               <a href="#form" className="hidden md:block bg-yellow-400 text-black font-extrabold px-8 py-3 rounded-full hover:bg-yellow-300 transition shadow-lg shadow-yellow-400/20 transform hover:-translate-y-1">
@@ -111,7 +111,7 @@ export default function Home() {
       </nav>
 
       {/* --- HERO SECTION --- */}
-      <section className="relative min-h-[90vh] flex items-center pt-24 overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center pt-24 overflow-hidden w-full">
         <div className="absolute inset-0 z-0">
           <Image 
             src="/bg.jpg" 
@@ -182,7 +182,7 @@ export default function Home() {
             <form onSubmit={handleSubmit} className="space-y-4">
               <input required placeholder="Ваше Имя" className="w-full bg-gray-50 border border-gray-200 rounded-xl p-4 text-gray-900 font-semibold"
                 value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} />
-              <input required placeholder="Телефон" type="tel" className="w-full bg-gray-50 border border-gray-200 rounded-xl p-4 text-gray-900 font-semibold"
+              <input required placeholder="Телефон" type="tel" inputMode="tel" className="w-full bg-gray-50 border border-gray-200 rounded-xl p-4 text-gray-900 font-semibold"
                 value={formData.phone} onChange={e => setFormData({...formData, phone: e.target.value})} />
               <input required placeholder="Автомобиль" className="w-full bg-gray-50 border border-gray-200 rounded-xl p-4 text-gray-900 font-semibold"
                 value={formData.car} onChange={e => setFormData({...formData, car: e.target.value})} />
@@ -265,8 +265,8 @@ export default function Home() {
                 <div>
                     <p className="text-white font-bold mb-2">Звоните:</p>
                     <div className="flex flex-col gap-2">
-                        <a href="tel:+789774201925" className="hover:text-yellow-400 transition text-xl font-bold">8 (977) 420-19-25</a>
-                        <a href="tel:+789256314376" className="hover:text-yellow-400 transition text-xl font-bold">8 (925) 631-43-76</a>
+                        <a href="tel:+79150890111" className="hover:text-yellow-400 transition text-xl font-bold">8 (915) 089-01-11</a>
+                        <a href="tel:+79916304963" className="hover:text-yellow-400 transition text-xl font-bold">8 (991) 630-49-63</a>
                     </div>
                  </div>
                </div>
